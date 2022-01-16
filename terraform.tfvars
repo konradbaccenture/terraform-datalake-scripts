@@ -1,5 +1,5 @@
 admin_role_name    = "Admin"
-sor_bucket_name    = "http://sorbucket.s3-aws-region.amazonaws.com"
-spec_bucket_name   = "http://specbucket.s3-aws-region.amazonaws.com"
+sor_bucket_name    = "sorbucket-my-eu-bucket-3"
+spec_bucket_name   = "specbucket-my-eu-bucket-3"
 glue_database_name = "testgluedb"
 accounts_allowed   = ["Admin"]
