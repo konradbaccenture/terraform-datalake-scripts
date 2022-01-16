@@ -18,6 +18,9 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinu
 
 git clone https://github.com/konradbaccenture/terraform-datalake-scripts.git;
 
-terraform init; terraform plan; terraform apply;
+terraform init; 
+terraform validate;
+terraform plan; 
+terraform apply;
 
 terraform destroy
