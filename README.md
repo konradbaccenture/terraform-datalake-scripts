@@ -1,17 +1,23 @@
-## Security Datalake - Terraform Scripts
+How to run
 
-Este repositório contem os scripts necessários para criar e testar um _datalake_ para times focados em Segurança da Informação, ao final sera criado os recursos necessários para funcionamento da solução descrito no blog.
+Create CMK
+Change CMK ARN in code
+Create an S3 and lake formation full access role
+Create EC2 Instance
+Apply the above role to EC2
+Connect to instance
 
-![Alt text](/../main/architecture.png?raw=true "Arquitetura de referência")
+#Install git #Perform a quick update on your instance: 
+sudo yum update -y; 
+#Install git in your EC2 instance 
+sudo yum install git -y;
 
+#Install Terraform 
+sudo yum install -y yum-utils; 
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo; sudo yum -y install terraform;
 
-## Security
+git clone https://github.com/konradbaccenture/terraform-datalake-scripts.git;
 
-#### Como o versionamento de objetos e a replição gera custos adicionais estes parametros são controlados por váriaveis como descrito no documento de implementação.
+terraform init; terraform plan; terraform apply;
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+terraform destroy
